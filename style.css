@@ -1,29 +1,72 @@
 body {
-    background: black;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Press Start 2P';
-
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "Press Start 2P";
 }
 
 section {
-    background: white;
-    margin: 30px;
-    align-items: center;
-    border-radius: 5px;
+  background: white;
+  margin: 30px;
+  align-items: center;
+  border-radius: 5px;
 }
 
 h1 {
-    color: red;
-}  
+  color: red;
+}
 
 h1:hover {
-    color: green;
-    cursor: none;
+  color: green;
+  cursor: none;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+#clicker {
+  margin: 20px;
+  color: yellow;
+  background: red;
+  padding: 10px;
+  width: 150px;
+  font-size: 15px;
+  border-radius: 5px;
+  font-family: "Press Start 2P";
+}
+
+#clicker:hover {
+  background: yellow;
+  color: red;
+  animation: shake 0.82s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

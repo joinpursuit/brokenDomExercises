@@ -4,7 +4,7 @@ const disemvowel = () => {
     const p = document.querySelector("#disemvowel-string");
     const str = el.value;
     let output = "";
-    const vowels = "aeiou"
+    const vowels = "aeiou"; // don't change this line
     for(const char of str) {
         if(!vowels.includes(char.toLowerCase())) {
             output += char;
@@ -26,9 +26,10 @@ const isPalindrome = () => {
 }
 const sum = (arr) => {
     let sum = 0; 
-    arr.forEach(num => {
+    for(let i = 0; i < arr.length; i++) {
+        const num = arr[i];
         sum += num
-    })
+    }
     return sum; 
 }
 const average = (arr) => {
@@ -66,3 +67,14 @@ const favoriteNumbers = () => {
 }
 
 favoriteNumbers();
+
+const incrementCount = () => {
+    const counter = document.querySelector("#click-count");
+    counter.textContent = Number(counter.textContent) + 1;
+}
+
+const reset = () => {
+    const counter = document.querySelector("#click-count");
+    counter.textContent = 0;
+}
+
