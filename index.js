@@ -78,3 +78,21 @@ const reset = () => {
     counter.textContent = 0;
 }
 
+const addItem = () => {
+    const shoppingList = document.querySelector(".shopping-list");
+    const input = document.querySelector("#add-item")
+    const item = input.value;
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    shoppingList.appendChild(listItem)
+    input.value = "";
+}
+
+const killButton = () => {
+    const button = document.querySelector("#kill-button");
+    button.parentNode.removeChild(button)
+
+    const header = document.querySelector("#kill-button-header");
+    header.innerText = "Yay you were victorious!"
+    header.style.color = "green";
+}
