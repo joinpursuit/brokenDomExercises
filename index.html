@@ -8,23 +8,22 @@
       href="https://fonts.googleapis.com/css?family=Armata|Patua+One|Press+Start+2P"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script rel="stylesheet" href="main.css" ></script>
     <title>Br*k%n! D$M</title>
-    <script src="index.js" defer></script>
   </head>
   <body>
     <h1>Br*k%n! D$M</h1>
     <section>
       <h2>Disemvowel</h2>
-      <input id="name-to-disemvowel" type="text" />
-      <button onclick="disemvowel()">Disemvowel</button>
-      <p id="disemvowel-string"></p>
+      <input id="name_to_disemvowel" type="number" />
+      <button onclick="disEmvowel()">Disemvowel</button>
+      <p class="disemvowel-string"></p>
     </section>
     <section>
       <h2>Is Palindrome?</h2>
 
-      <input id="is-palindrome-input" type="text" />
-      <button onclick="isPalindrome()">Is Palindrome?</button>
+      <input id="is-palindrome-input" type="password" />
+      <button onclick="isPalindrome">Is Palindrome?</button>
       <p id="is-palindrome-p"></p>
     </section>
     <section>
@@ -40,7 +39,7 @@
     <section>
       <h2>Favorite Number Stats</h2>
       <p id="sum-of-favorite-nums">Sum:</p>
-      <p id="average-of-favorite-nums">Average:</p>
+      <p id=average-of-favorite-nums>Average:</p>
       <h3>Odd Favorites</h3>
       <ul id="list-of-odd-favorite-nums"></ul>
     </section>
@@ -50,12 +49,12 @@
         <p>Click Count: </p>
         <p id="click-count">0</p>
         <button id="clicker" onclick="incrementCount()">Click!</button>
-        <button id="clicker" onclick="reset()">RESET!</button>
+        <button id="clicker" onclick="incrementCount()">RESET!</button>
     </section>
 
     <section>
         <h2>Shopping List</h2>
-        <input type="text" placeholder="What should I buy?" id="add-item"/>
+        <input type="text" value="What should I buy?" placeholder="What should I buy?" id="add-item"/>
         <button onclick="addItem()">Add Item</button>
         <ul class="shopping-list">
 

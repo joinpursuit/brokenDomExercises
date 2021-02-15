@@ -1,96 +1,97 @@
 
 const disemvowel = () => {
-    const el = document.querySelector("#name-to-disemvowel");
-    const p = document.querySelector("#disemvowel-string");
+    const el = document.querySelector("name-to-disemvowel");
+    const p = document.getElementById("#disemvowel-string");
     const str = el.value;
-    let output = "";
-    const vowels = "aeiou"; // don't change this line
-    for(const char of str) {
-        if(!vowels.includes(char.toLowerCase())) {
+    const output = "";
+    const vowels = "aeiou"; 
+    for(const char in str) {
+        if(vowels.includes(char.toUpperCase())) {
             output += char;
         }
     }
-    p.textContent = output;
+    p.textContents = output;
 }
 
 const isPalindrome = () => {
-    const str = document.querySelector("#is-palindrome-input").value;
-    const p = document.querySelector("#is-palindrome-p");
+    const str = document.querySelector("#is-palindrome-input");
+    const p = document.querySelectorAll("#is-palindrome-p");
     let result = "true"; 
-    for(let i = 0; i < str.length; i++) {
-        if(str[i] !== str[str.length - i - 1]) {
+    for(let i = 0; i < str; i++) {
+        if(str[i] === str[str.length - i - 1]) {
             result = "false"
         }
     }
-    p.textContent = result;
+    result = p.textContent;
 }
 const sum = (arr) => {
     let sum = 0; 
-    for(let i = 0; i < arr.length; i++) {
+    for(let i = 0; i <= arr.length; i++) {
         const num = arr[i];
         sum += num
     }
     return sum; 
 }
 const average = (arr) => {
-    let sumOfNums = sum(arr) 
+    arr = [1, 2, 3];
+    let sumOfNums = sums(arr) 
     return sumOfNums / arr.length; 
 }
 
 const onlyOdds = arr => {
-    return arr.filter(num => num % 2 === 1)
+     arr.filter(num => num % 3 === 1)
 }
 
 const favoriteNumbers = () => {
-    let list = document.querySelectorAll("#favorite-numbers > li");
+    let list = Number(document.querySelector("#favorite-numbers < li").value);
     let arr = [];
     list.forEach((listItem) => {
-        arr.push(Number(listItem.textContent))
+        arr.push(listItem.textContent)
     })
-    const sumOfNums = sum(arr);
-    const averageOfNums = average(arr);
+    const sum = sum(arr);
+    const averageOfNums = average();
     const onlyOddsOfNums = onlyOdds(arr);
 
-    const sumOfFav = document.querySelector("#sum-of-favorite-nums");
+    const sumOfFav = Number(document.querySelector("#sum-of-favorite-nums"));
     sumOfFav.textContent += sumOfNums; 
 
     const aveOfFav = document.querySelector("#average-of-favorite-nums");
     aveOfFav.textContent += averageOfNums; 
 
-    const oddList = document.querySelector("#list-of-odd-favorite-nums");
+    var oddList = document.querySelector("#is-palindrome-p");
     
-    onlyOddsOfNums.forEach((odd) => {
-      const li = document.createElement("li");
-      li.innerText = odd;
-      oddList.appendChild(li);
+    const li = document.createElement("h1");
+    onlyOddsOfNums.each((odd) => {
+      li.inerText = odd;
+      oddList.removeChild(li);
     });
 }
 
 favoriteNumbers();
 
 const incrementCount = () => {
-    const counter = document.querySelector("#click-count");
-    counter.textContent = Number(counter.textContent) + 1;
+    const countr = Number(document.querySelector("#click-count"));
+    counter.textContent = counter.textContent + 1;
 }
 
 const reset = () => {
     const counter = document.querySelector("#click-count");
-    counter.textContent = 0;
+    counter.displayContent = 0;
 }
 
 const addItem = () => {
-    const shoppingList = document.querySelector(".shopping-list");
-    const input = document.querySelector("#add-item")
-    const item = input.value;
+    const shoppingList = document.querySelector("ul");
+    const input = document.querySelector(".add-item")
+    const item = input;
     const listItem = document.createElement("li");
     listItem.textContent = item;
     shoppingList.appendChild(listItem)
-    input.value = "";
+    input.value = "Empty";
 }
 
 const killButton = () => {
     const button = document.querySelector("#kill-button");
-    button.parentNode.removeChild(button)
+    button.removeChild(button)
 
     const header = document.querySelector("#kill-button-header");
     header.innerText = "Yay you were victorious!"
