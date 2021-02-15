@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Armata|Patua+One|Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Br*k%n! D$M</title>
-    <script src="index.js"></script>
-</head>
-<body>
-    <input id="name-to-disemvowel" type="text" />
-    <button onclick="disemvowel()">Disemvowel</button>
-    <p id="disemvowel-string"></p>
-</body>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Br*k%n! D$M</h1>
+    <section>
+      <h2>Disemvowel</h2>
+      <input id="name-to-disemvowel" type="text" />
+      <button onclick="disemvowel()">Disemvowel</button>
+      <p id="disemvowel-string"></p>
+    </section>
+    <section>
+      <h2>Is Palindrome?</h2>
+
+      <input id="is-palindrome-input" type="text" />
+      <button onclick="isPalindrome()">Is Palindrome?</button>
+      <p id="is-palindrome-p"></p>
+    </section>
+    <section>
+      <h2>Favorite Numbers</h2>
+      <ul id="favorite-numbers">
+        <li>13</li>
+        <li>44</li>
+        <li>16</li>
+        <li>100</li>
+        <li>21</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Favorite Number Stats</h2>
+      <p id="sum-of-favorite-nums">Sum:</p>
+      <p id="average-of-favorite-nums">Average:</p>
+      <h3>Odd Favorites</h3>
+      <ul id="list-of-odd-favorite-nums"></ul>
+    </section>
+  </body>
 </html>

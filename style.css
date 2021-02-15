@@ -1,0 +1,29 @@
+body {
+    background: black;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Press Start 2P';
+
+}
+
+section {
+    background: white;
+    margin: 30px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+h1 {
+    color: red;
+}  
+
+h1:hover {
+    color: green;
+    cursor: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
